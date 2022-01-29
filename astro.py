@@ -6,16 +6,12 @@ sense.set_rotation(270)
 g = (255, 255, 0)
 r = (255, 0, 0)
 s = (0, 0, 0)
-gr = (200, 200, 200)
+gr = (100, 100, 100)
 
-sense.show_message("My name should be -------", back_colour=gr, text_colour=r)
+sense.show_message("My name should be -------", back_colour=gr, text_colour=r, scroll_speed=0.01)
 
 def bocafechada():
-    g = (255, 255, 0)
-    r = (255, 0, 0)
-    s = (0, 0, 0)
-    gr = (200, 200, 200)
-    
+       
     banana1 = [
     gr, gr, gr, gr, gr, gr, gr, gr,
     gr, gr, g, g, g, s, s, gr,
@@ -29,10 +25,6 @@ def bocafechada():
     return banana1
 
 def bocaaberta():
-    g = (255, 255, 0)
-    r = (255, 0, 0)
-    s = (0, 0, 0)
-    gr = (200, 200, 200)
 
     banana2 = [
     gr, gr, gr, gr, gr, gr, gr, gr,
@@ -47,14 +39,15 @@ def bocaaberta():
     return banana2
 
 sense.set_pixels(bocafechada())
-for count in range(3):
+for count in range(2):
     sense.set_pixels(bocaaberta())
     sleep(0.5)
     sense.set_pixels(bocafechada())
     sleep(0.5)
 
-humidity = sense.get_temperature()
-# sense.show_message("ISS is Cool!",scroll_speed=0.2 )
-sense.show_message("Humidity is " + str(round(humidity,2)) + "%", back_colour=gr, text_colour=r)
+humidity = sense.get_humidity()
+sense.show_message("Humidity is " + str(round(humidity,0)) + "%", back_colour=gr, text_colour=r, scroll_speed=0.2)
+sense.show_message("ISS is COOL!", back_colour=gr, text_colour=r, scroll_speed=0.2)
+sense.clear()
 
 
