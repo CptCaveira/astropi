@@ -46,8 +46,8 @@ for count in range(2):
     sleep(0.5)
 
 humidity = sense.get_humidity()
-sense.show_message("Humidity is " + str(round(humidity,0)) + "%", back_colour=gr, text_colour=r, scroll_speed=0.1)
-sense.show_message("ISS is COOL!", back_colour=gr, text_colour=r, scroll_speed=0.1)
+sense.show_message("Humidity is " + str(round(humidity)) + "%", back_colour=gr, text_colour=r, scroll_speed=0.1)
+sense.show_message(" - ISS is COOL!", back_colour=gr, text_colour=r, scroll_speed=0.1)
 sense.clear()
 
 
