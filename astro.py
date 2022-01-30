@@ -8,7 +8,7 @@ r = (255, 0, 0)
 s = (0, 0, 0)
 gr = (100, 100, 100)
 
-sense.show_message("My name should be -------", back_colour=gr, text_colour=r, scroll_speed=0.01)
+sense.show_message("My name should be Margherita Hack", back_colour=gr, text_colour=r, scroll_speed=0.05)
 
 def bocafechada():
        
@@ -46,8 +46,8 @@ for count in range(2):
     sleep(0.5)
 
 humidity = sense.get_humidity()
-sense.show_message("Humidity is " + str(round(humidity)) + "%", back_colour=gr, text_colour=r, scroll_speed=0.1)
-sense.show_message(" - ISS is COOL!", back_colour=gr, text_colour=r, scroll_speed=0.1)
+sense.show_message("Humidity is " + str(round(humidity)) + "%", back_colour=gr, text_colour=r, scroll_speed=0.05)
+sense.show_message(" - ISS is COOL!", back_colour=gr, text_colour=r, scroll_speed=0.05)
 sense.clear()
 
 
