@@ -328,4 +328,4 @@ wahl.append([
 ])
 for i in range(0, len(wahl)):
     sense.set_pixels(wahl[i])
-    sleep(0.001)
+    sleep(0.1)
